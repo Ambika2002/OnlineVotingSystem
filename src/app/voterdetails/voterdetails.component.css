@@ -1,0 +1,97 @@
+HTML CSSResult Skip Results Iframe
+EDIT ON
+body {
+  margin: 100px auto;
+  padding: 0;
+  background: #222;
+}
+
+.left {
+  left: 25px;
+}
+
+.right {
+  right: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 25px;
+}
+
+#gradient {
+  background: #999955;
+  background-image: linear-gradient(#de800d 20%, #eb9824 20%, #fefefe 40%, #fcfcfc 40%, #ffffff 60%, #55e585 60%, #25950e 80%, #18761e 80%);
+  margin: 0 auto;
+  margin-top: 240px;
+  width: 100%;
+  height: 150px;
+}
+
+#gradient:after {
+  content: "";
+  position: absolute;
+  background: #2b7219;
+  left: 50%;
+  margin-top: -67.5px;
+  margin-left: -270px;
+  padding-left: 20px;
+  border-radius: 5px;
+  width: 520px;
+  height: 275px;
+  z-index: -1;
+}
+
+#card {
+  position: absolute;
+  width: 450px;
+  height: 225px;
+  padding: 25px;
+  padding-top: 0;
+  padding-bottom: 0;
+  left: 50%;
+  top: 67.5px;
+  margin-top: 200px;
+  margin-left: -250px;
+  background: #f7f7f7;
+  box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
+  z-index: 5;
+}
+
+#card img {
+  width: 150px;
+  float: left;
+  border-radius: 5px;
+  margin-right: 20px;
+  -webkit-filter: sepia(1);
+  -moz-filter: sepia(1);
+  filter: sepia(1);
+}
+
+#card h2 {
+  font-family: courier;
+  color: #333;
+  margin: 90 auto;
+  padding: 0;
+  font-size: 18pt;
+}
+
+#card p {
+  font-family: courier;
+  color: #030101;
+  font-size: 20px;
+}
+
+#card span {
+  font-family: courier;
+}
+
+#card p.status{
+    background: #2b38e8;
+    color: #f7f7f7;
+    text-align: center;
+}

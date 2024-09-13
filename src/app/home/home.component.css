@@ -1,0 +1,70 @@
+header {
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
+    background-color: rgb(240, 132, 37);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping of nav items on smaller screens */
+  }
+  
+  nav h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust font size */
+  }
+  
+  nav a {
+    font-size: 20px; /* Adjusted for better readability */
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none; /* Remove underline */
+    margin: 5px 10px; /* Adds spacing between links */
+    transition: color 0.3s; /* Smooth color transition */
+  }
+  
+  nav a.active {
+    color: rgb(13, 13, 197);
+  }
+  
+  /* Hover effect for better interactivity */
+  nav a:hover {
+    color: rgb(13, 13, 197);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-centre; /* Align items to the left */
+    }
+  
+    nav h2 {
+      font-size: 22px; /* Slightly smaller heading */
+      margin-bottom: 10px; /* Adds space below the heading */
+    }
+  
+    nav a {
+      font-size: 16px; /* Slightly smaller links */
+      margin: 5px 0; /* Adds space between links */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav h2 {
+      font-size: 20px; /* Further reduce the heading size */
+    }
+  
+    nav a {
+      font-size: 14px; /* Further reduce the link size */
+      margin: 5px 0; /* Maintain vertical spacing */
+    }
+  }
+  

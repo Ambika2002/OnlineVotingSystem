@@ -1,0 +1,92 @@
+<!-- Display Election List -->
+<table border="1">
+  <tr>
+    <th>Election ID</th>
+    <th>Election Title</th>
+    <th>Description</th>
+    <th>Starts</th>
+    <th>Ends</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let election of elections">
+    <td>{{election.e_Id}}</td>
+    <td>{{election.name}}</td>
+    <td>{{election.description}}</td>
+    <td>{{election.startDate}}</td>
+    <td>{{election.endDate}}</td>
+    <td>
+      <button class="button1" (click)="editElection(election)">Edit</button>
+      <button class="button2" (click)="deleteElection(election.e_Id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+<!-- Add or Update Election Form -->
+<div *ngIf="isEditMode">
+  <h3>Edit Election Details</h3>
+  <form (ngSubmit)="updateElectionDetails()">
+    <table border="1">
+      <tr>
+        <th>
+          <label for="editId"><h3>Election ID: </h3></label>
+          <input id="editId" [(ngModel)]="selectedElection.e_Id" name="e_Id" disabled>
+        </th>
+        <th>
+          <label for="editName"><h3>Title:</h3></label>
+          <input id="editName" [(ngModel)]="selectedElection.name" name="name" required>
+        </th>
+        <th>
+          <label for="editDescription"><h3>Description:</h3></label>
+          <input id="editDescription" [(ngModel)]="selectedElection.description" name="description" required>
+        </th>
+      </tr>
+    </table>
+    <button class="button4" type="submit">Update Details</button>
+    <button class="button5" type="button" (click)="isEditMode = false">Cancel</button>
+  </form>
+
+  <h3>Edit Election Date</h3>
+  <form (ngSubmit)="updateElectionDate()">
+    <table border="1">
+      <tr>
+        <th>
+          <label for="editStartDate"><h3>Starts:</h3></label>
+          <input id="editStartDate" [(ngModel)]="selectedElection.startDate" name="startDate" required>
+        </th>
+        <th>
+          <label for="editEndDate"><h3>Ends:</h3></label>
+          <input id="editEndDate" [(ngModel)]="selectedElection.endDate" name="endDate" required>
+        </th>
+      </tr>
+    </table>
+    <button class="button4" type="submit">Update Date</button> <button class="button5" type="button" (click)="isEditMode = false">Cancel</button>
+  </form>
+</div>
+
+
+<div *ngIf="!isEditMode">
+  <h2>Add New Election</h2>
+  <form (ngSubmit)="addElection()">
+    <table border="1">
+      <tr>
+        <th><label for="addName">Title:</label></th>
+        <td><input id="addName" [(ngModel)]="electionInfo.name" name="name" required></td>
+      </tr>
+      <tr>
+        <th><label for="addDescription">Description:</label></th>
+        <td><input id="addDescription" [(ngModel)]="electionInfo.description" name="description" required></td>
+      </tr>
+      <tr>
+        <th><label for="addStartDate">Start Date:</label></th>
+        <td><input id="addStartDate" type="date" [(ngModel)]="electionInfo.startDate" name="startDate" required></td>
+      </tr>
+      <tr>
+        <th><label for="addEndDate">End Date:</label></th>
+        <td><input id="addEndDate" type="date" [(ngModel)]="electionInfo.endDate" name="endDate" required></td>
+      </tr>
+    </table>
+    <br>
+    <button class="button3"  type="submit">Add Election</button>
+  </form>
+</div>
+

@@ -1,0 +1,48 @@
+<h1>Voter Management</h1>
+<div class="col-md-12">
+<table border="1">
+  <thead>
+    <tr>
+      <th>System ID</th>
+      <th>Voter ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Voting Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let voter of voters">
+      <td>{{ voter.id }}</td>
+      <td>{{ voter.votId }}</td>
+      <td>{{ voter.name }}</td>
+      <td>{{ voter.email }}</td>
+      <td>{{ voter.passwordHash }}</td>
+      <td>{{ voter.hasVoted ? 'Yes' : 'No' }}</td>
+      <td>
+        <button class="button1" (click)="editVoter(voter)">Update</button>
+        <button class="button2" (click)="deleteVoter(voter.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Update Voter Form -->
+<div *ngIf="isEditMode">
+  <h2>Update Voter Email</h2>
+  <form (ngSubmit)="updateVoter()">
+    <label for="voterId">Voter ID:</label>
+    <input type="text" [(ngModel)]="selectedVoter.votId" name="voterId" disabled />
+
+    <label for="email">New Email:</label>
+    <input type="email" [(ngModel)]="selectedVoter.email" name="email" required />
+     <br>
+    <button type="submit">Save</button>
+    <br>
+    <button type="button" (click)="cancelEdit()">Cancel</button>
+  </form>
+</div>
+
+</div>
+

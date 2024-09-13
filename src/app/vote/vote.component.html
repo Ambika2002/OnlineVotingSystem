@@ -1,0 +1,37 @@
+<!-- <h2>Vote for a Candidate</h2>
+
+<div *ngIf="candidates && candidates.length > 0">
+  <h3>Select an Election and Vote:</h3>
+
+  <!-- Dropdown to select an election -->
+  <!-- <select [(ngModel)]="electionId">
+    <option *ngFor="let election of elections" [value]="election.electionId">
+      {{ election.electionName }}
+    </option>
+  </select>
+
+  <!-- List of candidates -->
+  <!-- <ul>
+    <li *ngFor="let candidate of candidates">
+      <p><strong>{{ candidate.name }}</strong> - {{ candidate.party }}</p>
+      <button (click)="castVote(candidate.candidateId)">Cast Vote</button>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!candidates || candidates.length === 0">
+  <p>No candidates available for voting.</p>
+</div> --> --> -->
+<div *ngIf="candidates.length > 0">
+  <h3>Available Candidates for Election: {{election.election.name}}</h3>
+  <ul>
+    <li *ngFor="let candidate of candidates">
+      <p><strong>{{ candidate.name }}</strong> - {{ candidate.party }}</p>
+      <button (click)="castVote(candidate.candidate_id)">Cast Vote</button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="candidates.length === 0">
+  <p>No candidates available for this election.</p>
+</div>
+

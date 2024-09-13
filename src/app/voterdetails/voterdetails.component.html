@@ -1,0 +1,64 @@
+<body>
+  <div id="gradient" *ngIf="voter"></div>
+  <div id="card">
+    <h2>Voter Details</h2>
+    <p><strong>Name:</strong> {{ voter.name }}</p>
+    <p><strong>Email ID:</strong> {{ voter.email }}</p>
+    <p class="status"><strong>Voting Status:</strong> {{ voter.votingStatus ? 'Voted' : 'Not Voted' }}</p>
+
+   <!-- Show the list of ongoing elections and candidates if the voter has not voted yet -->
+  <!-- <div *ngIf="!voter.votingStatus"> -->
+    <!-- <h3>Available Elections:</h3>
+    <div *ngFor="let election of electionsWithCandidates">
+      <h4>{{ election.election.name }} ({{ election.election.description }})</h4>
+      <ul>
+        <li *ngFor="let candidate of election.candidates">
+          <p><strong>{{ candidate.name }} ({{ candidate.party }})</strong></p>
+          <button (click)="navigateToVote(election.election.e_id, candidate.candidate_id)">Cast Vote</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+<!-- <div *ngIf="!voter">
+  <p>No voter details available.</p>
+</div>
+
+<div *ngIf="electionsWithCandidates.length > 0">
+  <h2>Available Elections</h2>
+  <ul>
+    <li *ngFor="let election of electionsWithCandidates">
+      <h3>{{ election.election.e_Id }}</h3>
+      <h3>{{ election.election.name }}</h3>
+      <p>{{ election.election.description }}</p>
+      <p><strong>Start Date:</strong> {{ election.election.startDate | date }}</p>
+      <p><strong>End Date:</strong> {{ election.election.endDate | date }}</p>
+      <button (click)="navigateToVote(election)">View Candidates & Vote</button>
+    </li>
+  </ul>
+</div>
+<div *ngIf="electionsWithCandidates.length === 0">
+  <p>No ongoing elections available.</p>
+</div> -->
+
+
+  <!-- Voting Interface -->
+  <div *ngIf="!voter.votingStatus">
+    <h3>Available Elections:</h3>
+    <ul>
+      <li *ngFor="let item of electionsWithCandidates">
+        <h4>{{ item.election.name }}</h4>
+        <p>{{ item.election.description }}</p>
+        <button (click)="selectElection(item.election.e_Id)">Select Election</button>
+        <ul *ngIf="selectedElectionId === item.election.e_Id">
+          <li *ngFor="let candidate of item.candidates">
+            <p><strong>{{ candidate.name }}</strong> ({{ candidate.party }})</p>
+            <button (click)="selectCandidate(candidate.candidate_id)">Select</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <button (click)="castVote()">Cast Vote</button>
+  </div>
+</div>
+
