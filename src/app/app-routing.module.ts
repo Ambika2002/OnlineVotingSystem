@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, 
   {path:'login',component:LoginComponent},
   {path:'results',component:ElectionresultComponent},
-  { path: '', redirectTo: '/voters', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
   // Default route
 ];
 

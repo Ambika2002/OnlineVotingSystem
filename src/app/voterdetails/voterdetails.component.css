@@ -3,7 +3,7 @@ EDIT ON
 body {
   margin: 100px auto;
   padding: 0;
-  background: #222;
+  background: #faf8f8;
 }
 
 .left {
@@ -27,10 +27,19 @@ body {
   background: #999955;
   background-image: linear-gradient(#de800d 20%, #eb9824 20%, #fefefe 40%, #fcfcfc 40%, #ffffff 60%, #55e585 60%, #25950e 80%, #18761e 80%);
   margin: 0 auto;
-  margin-top: 240px;
+  margin-top: 100px;
   width: 100%;
-  height: 150px;
+  height: 40px;
 }
+#gradient1 {
+  background: #999955;
+  background-image: linear-gradient(#de800d 20%, #eb9824 20%, #fefefe 40%, #fcfcfc 40%, #ffffff 60%, #55e585 60%, #25950e 80%, #18761e 80%);
+  margin-top: 80px;
+  margin-left: -240px;
+  width: 1000px;
+  height: auto;
+}
+
 
 #gradient:after {
   content: "";
@@ -55,7 +64,7 @@ body {
   padding-bottom: 0;
   left: 50%;
   top: 67.5px;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: -250px;
   background: #f7f7f7;
   box-shadow: -20px 0 35px -25px black, 20px 0 35px -25px black;
@@ -94,4 +103,29 @@ body {
     background: #2b38e8;
     color: #f7f7f7;
     text-align: center;
+}
+.button1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+  margin-right: -500px;
+  width: 100px;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button1:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
 }

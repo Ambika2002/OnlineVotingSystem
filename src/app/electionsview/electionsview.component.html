@@ -1,17 +1,24 @@
-<!-- Display Election List -->
-<table border="1">
-    <tr>
-      <th>Election ID</th>
-      <th>Election Title</th>
-      <th>Description</th>
-      <th>Starts</th>
-      <th>Ends</th>
-    </tr>
-    <tr *ngFor="let election of elections">
-      <td>{{election.e_Id}}</td>
-      <td>{{election.name}}</td>
-      <td>{{election.description}}</td>
-      <td>{{election.startDate}}</td>
-      <td>{{election.endDate}}</td>
-    </tr>
-  </table>
+
+<div class="main-container">
+  <div class="col-md-12">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Election ID</th>
+          <th>Election Title</th>
+          <th>Description</th>
+          <th>Starts</th>
+          <th>Ends</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let  election of elections">
+          <td>{{election.e_Id}}</td>
+        <td>{{election.name}}</td>
+        <td>{{election.description}}</td>
+        <td>{{election.startDate | date: 'd MMMM yyyy'}}</td>
+        <td>{{election.endDate | date: 'd MMMM yyyy'}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

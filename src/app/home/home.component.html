@@ -1,16 +1,20 @@
-<header>
+<!-- <header>
     <nav>
         <h2 ><a routerLink="/home">Online Voting System</a></h2>
-        <!-- <a routerLink="/voters" routerLinkActive="active">Voters</a> 
-        <a routerLink="/candidates" routerLinkActive="active">Candidates</a>  --> 
+       <a routerLink="/voters" routerLinkActive="active">Voters</a> 
+        <a routerLink="/candidates" routerLinkActive="active">Candidates</a>  
   
         <a routerLink="/electionsview" routerLinkActive="active">Elections</a>
         <a routerLink="/results" routerLinkActive="active">Results</a>
     </nav>
-</header>
+</header> -->
 
-
- <!-- <header>
+<!-- <header>
+	<div class="overlay">
+<h1>Voterness</h1>
+<h3>An online voting platform</h3>
+<p>Be responsible, cast vote !</p>
+<header>
     <nav>
         <h2 ><a routerLink="/register">Online Voting System</a></h2>
        <a routerLink="/voters" routerLinkActive="active">Voters</a> 
@@ -18,4 +22,31 @@
         <a routerLink="/elections" routerLinkActive="active">Elections</a> -->
         <!-- <a routerLink="/results" routerLinkActive="active">Results</a>
     </nav>
-</header> -->
+</header>
+		</div>
+</header> --> 
+
+<body>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+          <h1>Voterness</h1>
+          <a class="home" routerLink="/home" routerLinkActive="active">Home</a>
+          </div>
+          <img [src]="path" alt=""/>
+          <div class="menu-items">
+            <li><a routerLink="/electionsview" routerLinkActive="active">Elections</a></li>
+            <li> <a routerLink="/results" routerLinkActive="active">Results</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+   
+  </body>

@@ -5,6 +5,25 @@
     <p><strong>Name:</strong> {{ voter.name }}</p>
     <p><strong>Email ID:</strong> {{ voter.email }}</p>
     <p class="status"><strong>Voting Status:</strong> {{ voter.votingStatus ? 'Voted' : 'Not Voted' }}</p>
+  <!-- Voting Interface -->
+  <div id="gradient1" *ngIf="!voter.votingStatus">
+    <h3>Available Elections:</h3>
+    <ul>
+      <li *ngFor="let item of electionsWithCandidates">
+        <h4>{{ item.election.name }}</h4>
+        <p>{{ item.election.description }}</p>
+        <button (click)="selectElection(item.election.e_Id)">Select Election</button>
+        <ul *ngIf="selectedElectionId === item.election.e_Id">
+          <li *ngFor="let candidate of item.candidates">
+            <p><strong>{{candidate.candidate_id}}-{{ candidate.name }}</strong> ({{ candidate.party }})</p>
+            <button class="button1" (click)="selectCandidate(candidate.candidate_id)">Select</button>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <button class="button1" (click)="castVote()">Cast Vote</button>
+  </div>
+</div>
 
    <!-- Show the list of ongoing elections and candidates if the voter has not voted yet -->
   <!-- <div *ngIf="!voter.votingStatus"> -->
@@ -42,23 +61,4 @@
 </div> -->
 
 
-  <!-- Voting Interface -->
-  <div *ngIf="!voter.votingStatus">
-    <h3>Available Elections:</h3>
-    <ul>
-      <li *ngFor="let item of electionsWithCandidates">
-        <h4>{{ item.election.name }}</h4>
-        <p>{{ item.election.description }}</p>
-        <button (click)="selectElection(item.election.e_Id)">Select Election</button>
-        <ul *ngIf="selectedElectionId === item.election.e_Id">
-          <li *ngFor="let candidate of item.candidates">
-            <p><strong>{{ candidate.name }}</strong> ({{ candidate.party }})</p>
-            <button (click)="selectCandidate(candidate.candidate_id)">Select</button>
-          </li>
-        </ul>
-      </li>
-    </ul>
-    <button (click)="castVote()">Cast Vote</button>
-  </div>
-</div>
 

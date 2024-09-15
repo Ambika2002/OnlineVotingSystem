@@ -1,0 +1,17 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{height: 100vh;
+	background: url('C:/Users/asanap2/Downloads/manny-becerra-BzZ6aI5_AYs-unsplash.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	background-position: 50px 50px 50px 50px;
+	
+}
+
+h1{
+	font-family:Georgia, 'Times New Roman', Times, serif;
+   justify-content: center;
+   margin-top: 30px;
+   margin-left: 400px;
+   color: azure;
+}

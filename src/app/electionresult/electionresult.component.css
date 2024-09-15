@@ -7,35 +7,52 @@
 }
 
 body {
-  background: #ea910b;
-  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+ margin-left: -150px;
+ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 table {
-  background: #1d5321;
+  background: #2427d3 ;
   border-radius: 0.25em;
   border-collapse: collapse;
-  border: block 1px;;
-  margin: 1em;
+  border: block 2px;;
+  margin-left:250px;
+  margin-top: 50px;
+ 
 }
+
+.table1 {
+  background: #1d5321;
+  border-radius: 0.50em;
+  border-collapse: collapse;
+  margin-left:600px;
+  margin-top: 20px;
+}
+
 th {
   border-bottom: 1px solid #364043;
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 8000;
   padding: 0.5em 1em;
   text-align: left;
 }
 td {
   color: #fff;
-  font-weight: 100;
+  font-weight: 400;
   padding: 1em 1em;
   text-align: centre;
 }
 .disabled td {
   color: #4F5F64;
 }
+tbody{
+  margin-top: 10px;
+}
 tbody tr {
   transition: background 0.25s ease;
+  margin-top: -80px;
 }
 tbody tr:hover {
   background: #014055;
@@ -93,4 +110,30 @@ tbody tr:hover {
 .button2:focus {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
+}
+
+.button4{
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  border-radius: 900px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 100px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 800;
+  text-align: center;
+  padding: 12px 16px 18px;
+  color: #fff;
+  background-color: #d76121;
+  height: 40px;
+  margin-left: 10px;
+  :hover{
+      background-color: #1db954;
+  }
 }

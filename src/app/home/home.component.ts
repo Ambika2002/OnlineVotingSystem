@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   private APIUrl = "https://localhost:7181/api/Voter/";
+  path="public/vote.jpg"
+ 
 }

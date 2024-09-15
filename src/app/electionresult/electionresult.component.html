@@ -1,24 +1,48 @@
-<h1>Voter Management</h1>
-<div class="col-md-12">
-<table border="1">
+<body>
+  <div class="col-md-12">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Election ID</th>
+          <th>Title</th>
+          <th>Candidate Id</th>
+          <th>Candiate Name</th>
+          <th>Party</th>
+          <th>Total Votes</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results">
+          <td>{{ result.electionId }}</td>
+          <td>{{ result.electionName}}</td>
+          <td>{{ result.candidateId }}</td>
+          <td>{{ result.candidateName }}</td>
+          <td>{{ result.candidateParty}}</td>
+          <td>{{ result.totalVotes }}</td>
+          <td>
+            <button class="button4" (click)="getWinner(result.electionId)">Get Winner</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<table class="table1" border="1">
   <thead>
     <tr>
-      <th>Election ID</th>
-      <th>Title</th>
-      <th>Candidate Id</th>
       <th>Candiate Name</th>
       <th>Party</th>
       <th>Total Votes</th>
+      <th>Percentage of <br>Votes received</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let result of results">
-      <td>{{ result.electionId }}</td>
-      <td>{{ result.electionName}}</td>
-      <td>{{ result.candidateId }}</td>
-      <td>{{ result.candidateName }}</td>
-      <td>{{ result.candidateParty}}</td>
-      <td>{{ result.totalVotes }}</td>
-    </tr>
+    <tr *ngFor="let win of winner">
+    <td> {{ win.name }}</td>
+    <td> ({{ win.party }})</td>
+          <td>{{ win.totalVotes }}</td>
+          <td>{{win.votePercentage}}</td>
+        
+        </tr>
   </tbody>
 </table>
+

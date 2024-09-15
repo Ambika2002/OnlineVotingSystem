@@ -2,12 +2,13 @@
 <div class="login-container">
     <form (ngSubmit)="login()" #loginForm="ngForm">
       <div>
+        <h1>Admin Login</h1>
         <label for="username">Username</label>
-        <input type="text" id="username" [(ngModel)]="loginRequest.username" name="username" required />
+        <input type="text" id="username" [(ngModel)]="loginRequest.username" name="username" placeholder="Enter your Username" required />
       </div>
       <div>
         <label for="password">Password</label>
-        <input type="password" id="password" [(ngModel)]="loginRequest.password" name="password" required />
+        <input type="password" id="password" [(ngModel)]="loginRequest.password" name="password" placeholder="Enter your password" required />
       </div>
       <button type="submit" [disabled]="!loginForm.form.valid">Login</button>
     </form>

@@ -15,7 +15,6 @@ import { VoterdetailsComponent } from './voterdetails/voterdetails.component';
 import { VoteComponent } from './vote/vote.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { ElectionresultComponent } from './electionresult/electionresult.component';
 import { IndexComponent } from './index/index.component';
 import { ElectionsviewComponent } from './electionsview/electionsview.component';
@@ -44,7 +43,7 @@ import { ElectionsviewComponent } from './electionsview/electionsview.component'
     FormsModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+   
   ],
   bootstrap: [AppComponent]
 })

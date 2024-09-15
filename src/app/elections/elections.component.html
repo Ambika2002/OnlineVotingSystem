@@ -12,8 +12,8 @@
     <td>{{election.e_Id}}</td>
     <td>{{election.name}}</td>
     <td>{{election.description}}</td>
-    <td>{{election.startDate}}</td>
-    <td>{{election.endDate}}</td>
+    <td>{{election.startDate | date: 'd MMMM yyyy'}}</td>
+    <td>{{election.endDate | date: 'd MMMM yyyy'}}</td>
     <td>
       <button class="button1" (click)="editElection(election)">Edit</button>
       <button class="button2" (click)="deleteElection(election.e_Id)">Delete</button>
