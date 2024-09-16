@@ -65,7 +65,7 @@
 
 
 <div *ngIf="!isEditMode">
-  <h2>Add New Election</h2>
+  <h2 class="elec">Add New Election</h2>
   <form (ngSubmit)="addElection()">
     <table border="1">
       <tr>
@@ -84,9 +84,9 @@
         <th><label for="addEndDate">End Date:</label></th>
         <td><input id="addEndDate" type="date" [(ngModel)]="electionInfo.endDate" name="endDate" required></td>
       </tr>
+      <button class="button3"  type="submit">Add Election</button>
     </table>
     <br>
-    <button class="button3"  type="submit">Add Election</button>
   </form>
 </div>
 

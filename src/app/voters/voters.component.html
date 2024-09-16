@@ -1,4 +1,4 @@
-<h1>Voter Management</h1>
+
 <div class="col-md-12">
 <table border="1">
   <thead>
@@ -32,15 +32,17 @@
 <div *ngIf="isEditMode">
   <h2>Update Voter Email</h2>
   <form (ngSubmit)="updateVoter()">
-    <label for="voterId">Voter ID:</label>
-    <input type="text" [(ngModel)]="selectedVoter.votId" name="voterId" disabled />
+    <table border="1" class="table1">
+    <label class="textbox"  for="voterId">Voter ID:</label>
+    <input class="textbox" type="text" [(ngModel)]="selectedVoter.votId" name="voterId" disabled />
 
-    <label for="email">New Email:</label>
-    <input type="email" [(ngModel)]="selectedVoter.email" name="email" required />
-     <br>
-    <button type="submit">Save</button>
-    <br>
-    <button type="button" (click)="cancelEdit()">Cancel</button>
+    <label class="textbox" for="email"> New Email: </label>
+    <input class="textbox" type="email" [(ngModel)]="selectedVoter.email" name="email" required />
+    <button class="button1next" type="submit">Save</button>
+  <button class="button2next" type="button" (click)="cancelEdit()">Cancel</button>
+  </table>
+  
+  
   </form>
 </div>
 

@@ -4,14 +4,12 @@
     <th>Candidate ID</th>
     <th>Name</th>
     <th>Party</th>
-    <th>Total Votes</th>
     <th>Actions</th>
   </tr>
   <tr *ngFor="let candidate of candidates">
     <td>{{candidate.candidate_id}}</td>
     <td>{{candidate.name}}</td>
     <td>{{candidate.party}}</td>
-    <td>{{candidate.totalVotes}}</td>
     <td>
       <button class="button1"  (click)="editCandidate(candidate)">Edit</button>
       <button class="button2" (click)="deleteCandidate(candidate.candidate_id)">Delete</button>
@@ -21,19 +19,23 @@
 
 <!-- Add or Update Candidate Form -->
 <div *ngIf="isEditMode">
-  <h3>Edit Candidate</h3>
+  
   <form (ngSubmit)="updateCandidate()">
-    <label for="editId">Candidate ID:</label>
+    <h3>Edit Candidate</h3>
+    <table border="1" class="table2">
+   <th> <label for="editId">Candidate ID:</label></th>
     <input id="editId" [(ngModel)]="selectedCandidate.candidate_id" name="candidate_id" disabled>
 
-    <label for="editName">Name:</label>
+    <th><label for="editName">Name:</label></th>
     <input id="editName" [(ngModel)]="selectedCandidate.name" name="name"  disabled>
 
-    <label for="editParty">Party:</label>
+    <th><label for="editParty">Party:</label></th>
     <input id="editParty" [(ngModel)]="selectedCandidate.party" name="party" required>
 
-    <button  type="submit">Update Candidate</button>
-    <button  (click)="isEditMode = false">Cancel</button>
+    <td><button  class="button1" type="submit">Update Candidate</button>
+    <button class="button2next"  (click)="isEditMode = false">Cancel</button></td>
+  </table>
+ 
   </form>
 </div>
 

@@ -9,9 +9,24 @@
 			<div class="signup">
                 <form (ngSubmit)="registerVoter()">
 					<label for="chk" aria-hidden="true">Register</label>
-                    <input type="text" name="txt" [(ngModel)]="registerForm.voterId" placeholder="Voter Id" required>
-                    <input type="email" name="email" [(ngModel)]="registerForm.email" placeholder="Email" required>
-                    <input type="password" name="pswd" [(ngModel)]="registerForm.passwordHash" placeholder="Password" required>
+                    <input type="text" name="txt" [(ngModel)]="registerForm.voterId" placeholder="Voter Id" required 
+					minlength="8"
+					maxlength="20"
+					pattern="[A-Za-z0-9]+"
+					#voterId="ngModel">
+					<div  *ngIf="voterId.invalid && voterId.touched" class="error">
+						*Voter ID is required and should be 8-20 alphanumeric characters.
+					  </div>
+                    <input type="email" name="email" [(ngModel)]="registerForm.email" placeholder="Email" required 
+					email
+					#email="ngModel"> <div *ngIf="email.invalid && email.touched" class="error">
+						*Please enter a valid email address.
+					  </div>
+                    <input type="password" name="pswd" [(ngModel)]="registerForm.passwordHash" placeholder="Password" required minlength="8"
+					maxlength="20"  #passwordHash="ngModel" />
+					<div *ngIf="passwordHash.invalid && passwordHash.touched" class="error">
+						*Password is required and should be at least 8 characters long.
+					  </div>
 					<button type="submit">Submit</button>
 				</form>
 			</div>
@@ -19,8 +34,14 @@
 			<div class="login">
 				<form (ngSubmit)="loginVoter()">
 					<label for="chk" aria-hidden="true">Login</label>
-					<input type="text" name="voterId" [(ngModel)]="loginForm.voterId" placeholder="VoterId" required>
-        <input type="password" name="pswd" [(ngModel)]="loginForm.passwordHash" placeholder="Password" required>
+					<input type="text" name="voterId" [(ngModel)]="loginForm.voterId" placeholder="VoterId" required minlength="8"
+					maxlength="20"
+					pattern="[A-Za-z0-9]+"
+					#vname="ngModel"/><div  *ngIf="vname.invalid && vname.touched" class="error">
+						*Voter ID is required and should be 8-20 alphanumeric characters. </div>
+        <input type="password" name="pswd" [(ngModel)]="loginForm.passwordHash" placeholder="Password" required minlength="8"
+		maxlength="20"  #password="ngModel" />	<div *ngIf="password.invalid && password.touched" class="error">
+			*Password is required and should be at least 8 characters long. </div>
 					<button type="submit">Login</button>
 				</form>
 			</div>

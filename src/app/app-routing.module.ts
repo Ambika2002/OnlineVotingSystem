@@ -17,13 +17,13 @@ import { ElectionsviewComponent } from './electionsview/electionsview.component'
 const routes: Routes = [
   { path: 'home', component: IndexComponent },
   { path: 'electionsview', component: ElectionsviewComponent },
-  { path: 'voters', component: VotersComponent },
-  { path: 'candidates', component: CandidatesComponent },
-  { path: 'elections', component: ElectionsComponent },
+  { path: 'voters', component: VotersComponent,canActivate: [AuthGuard] },
+  { path: 'candidates', component: CandidatesComponent,canActivate: [AuthGuard] },
+  { path: 'elections', component: ElectionsComponent,canActivate: [AuthGuard] },
   {path:'register', component:RegisterComponent},
   {path:'voterdetails', component:VoterdetailsComponent},
   {path:'vote', component:VoteComponent},
-  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }, 
+  { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuard] }, 
   {path:'login',component:LoginComponent},
   {path:'results',component:ElectionresultComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }

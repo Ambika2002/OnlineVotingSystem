@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   
 }
 
@@ -20,7 +20,7 @@ body {
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgba(168, 96, 2, 0.15);
-  background-color: #b87512;
+  background-color: #e18515;
 }
 
 .nav-container {
@@ -35,15 +35,15 @@ body {
 }
 
 .navbar .nav-container li {
-  list-style: none;
+  list-style:circle
 }
 
 .navbar .nav-container a {
-  text-decoration: none;
-  color: #ffffff;
+  text-decoration:wavy;
+  color: #1ce4f7;
   font-weight: 800;
-  font-size: 1.2rem;
-  padding: 0.7rem;
+  font-size: 2rem;
+  padding: 0.9rem;
 }
 
 .navbar .nav-container a:hover{
@@ -119,8 +119,8 @@ body {
 
 .navbar .menu-items li {
   margin-bottom: 1.2rem;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 900;
 }
 
 .logo {

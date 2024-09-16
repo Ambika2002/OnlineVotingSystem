@@ -18,6 +18,8 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ElectionresultComponent } from './electionresult/electionresult.component';
 import { IndexComponent } from './index/index.component';
 import { ElectionsviewComponent } from './electionsview/electionsview.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth.guard';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { ElectionsviewComponent } from './electionsview/electionsview.component'
     FormsModule
   ],
   providers: [
-   
+    AuthService,
+     AuthGuard
   ],
   bootstrap: [AppComponent]
 })

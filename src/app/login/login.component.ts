@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,8 +20,9 @@ export class LoginComponent {
   login() {
     this.authService.login(this.loginRequest).subscribe(
       (response) => {
-        this.authService.setToken(response.Token); // Store token in localStorage or sessionStorage
+        this.authService.setToken(response.token); // Store token in localStorage or sessionStorage
         alert('Login successful!');
+        console.log(response.token)
         this.router.navigate(['/dashboard']); // Navigate to dashboard after login
       },
       (error) => {

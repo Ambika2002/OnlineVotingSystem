@@ -1,6 +1,6 @@
 // dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,8 +16,16 @@ export class DashboardComponent implements OnInit {
       alert('You are not authorized to view this page.');
       // Optionally redirect to login page
     }
+
+    history.pushState(null, '', location.href);
+    window.onpopstate = () => {
+      history.pushState(null, '', location.href);
+    };
   }
 
+  logout() {
+    this.authService.logout(); // Call the logout method from the service
+  }
   // Methods to fetch voters, candidates, elections, and CRUD operations go here
 }
 

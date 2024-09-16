@@ -1,0 +1,456 @@
+ICandidateOpt:
+
+        //Task<bool> AddCandidateAsync(Candidates candidate);
+        //Task<bool> UpdateCandidateAsync(int cid,string party);
+        //Task<bool> RemoveCandidateAsync(int cid);
+
+CandidateOpt:
+
+
+
+
+
+//public async Task<bool> AddCandidateAsync(Candidates candidate)
+//{
+//    try
+//    {
+//        await _conn.OpenAsync();
+//        int result = await _conn.ExecuteAsync("AddCandidate", new { cname = candidate.Name, cparty=candidate.Party,totvote=candidate.TotalVotes},
+//            commandType: System.Data.CommandType.StoredProcedure);
+//        return result < 0;
+
+//    }
+//    catch (Exception ex)
+//    {
+//        Console.WriteLine(ex.Message);
+//        return false;
+//    }
+//    finally
+//    {
+//        await _conn.CloseAsync();
+//    }
+//}
+
+//public async Task<bool> UpdateCandidateAsync(int c_id, string party_name)
+//{
+//    try
+//    {
+//        await _conn.OpenAsync();
+//        int result = await _conn.ExecuteAsync("UpdateCandiate", new { cid= c_id, cparty = party_name },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//        return result < 0;
+
+//    }
+//    catch (Exception ex)
+//    {
+//        Console.WriteLine(ex.Message);
+//        return false;
+//    }
+//    finally
+//    {
+//        await _conn.CloseAsync();
+//    }
+//}
+//public async Task<bool> RemoveCandidateAsync(int c_id)
+//{
+
+//    using (_conn)
+//    {
+//        int result = await _conn.ExecuteAsync("DeleteCandidate", new { cid = c_id },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//        return result < 0;
+
+//    }
+//}
+
+
+
+AdminController:
+    //[HttpGet("election-results")]
+    //public async Task<IActionResult> GetAllElectionResults()
+    //{
+    //    var results = await _resultRepository.GetAllElectionResultsAsync();
+    //    return Ok(results);
+    //}
+
+
+CandidateController:
+
+        //[HttpPost("addcandidate")]
+        //public async Task<IActionResult> InsertCandidate([FromBody] Candidates candidate)
+        //{
+        //    if (candidate == null)
+        //    {
+        //        return BadRequest("Candidate data is required.");
+        //    }
+
+        //    try
+        //    {
+
+        //        await  _candidateOpt.AddCandidateAsync(candidate);
+
+        //        return Ok("Candidate record added successfully.");
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        Console.WriteLine($"An error occurred: {ex.Message}");
+
+        //        return StatusCode(500, "An error occurred while adding the voter record");
+
+        //    }
+        //}
+
+
+        //[HttpPut("updatecandidate")]
+        //public async Task<IActionResult> UpdateCandidate(int id, string c_party)
+        //{
+        //    var status = await _candidateOpt.UpdateCandidateAsync(id,c_party) ;
+
+        //    if (!status)
+        //    {
+        //        return BadRequest("Failed to update Candidate Record");
+        //    }
+        //    return NoContent();
+        //}
+
+        //[HttpDelete("deletecandidate/{id}")]
+        //public async Task<ActionResult<Voters>> DeleteVoterAsync([FromRoute] int c_id)
+        //{
+        //    var status = await _candidateOpt.RemoveCandidateAsync(c_id);
+        //    if (!status)
+        //    {
+        //        return BadRequest("failed to delete candidate record");
+        //    }
+        //    return NoContent();
+        //}
+
+
+IElectionResultOpt:
+       // Task<bool> MarkVoterAsVotedAsync(int voterId);
+        //Task<bool> HasVotedAsync(int voterId);
+
+//Task<bool> CastVoteAsync(int electionid, int candidateid);
+
+
+ElectionREsultOpt:
+      //public async Task<bool> HasVotedAsync(int voterId)
+      //{
+      //    try
+      //    {
+      //        await _conn.OpenAsync();
+      //        var parameters = new { id = voterId };
+      //        var result = await _conn.QueryFirstOrDefaultAsync<bool>("SELECT hasvoted FROM voters WHERE id = @id", parameters);
+      //        return result;
+      //    }
+      //    catch (Exception ex)
+      //    {
+      //        Console.WriteLine(ex.Message);
+      //        return false;
+      //    }
+      //    finally
+      //    {
+      //        await _conn.CloseAsync();
+      //    }
+      //}
+
+      //public async Task<bool> MarkVoterAsVotedAsync(int voterId)
+      //{
+
+      //    try
+      //    {
+      //        await _conn.OpenAsync();
+      //        int result = await _conn.ExecuteAsync("MarkVoterasVoted", new { p_voterid=voterId},
+      //            commandType: System.Data.CommandType.StoredProcedure);
+      //        return result < 0;
+
+      //    }
+      //    catch (Exception ex)
+      //    {
+      //        Console.WriteLine(ex.Message);
+      //        return false;
+      //    }
+      //    finally
+      //    {
+      //        await _conn.CloseAsync();
+      //    }
+      //}
+
+ //public async Task<bool>CastVoteAsync(int electionid,int cand_id)
+ //{
+ //    try
+ //    {
+ //        await _conn.OpenAsync();
+ //        int result = await _conn.ExecuteAsync("CastVote", new { p_electionid = electionid, p_candidateid = cand_id},
+ //            commandType: System.Data.CommandType.StoredProcedure);
+ //        return result < 0;
+
+ //    }
+ //    catch (Exception ex)
+ //    {
+ //        Console.WriteLine(ex.Message);
+ //        return false;
+ //    }
+ //    finally
+ //    {
+ //        await _conn.CloseAsync();
+ //    }
+ //}
+
+
+IVoterOpt:
+ //Task<Elections> GetCurrentElectionAsync();
+ //Task<bool>UpdateVoterAsync(int id,string emailid);
+ //Task<bool> RemoveVoterAsync(int voterid);
+
+
+ElectionResultController:
+
+        //[HttpPost("addelections")]
+        //public async Task<IActionResult> InsertElectionsAsync([FromBody]Elections election)
+        //{
+        //    var status = await _electionOpt.AddElectionAsync(election);
+        //    if (!status)
+        //    {
+        //        return BadRequest("Failed to add election record....");
+        //    }
+        //    return CreatedAtAction(nameof(GetElectionIdAsync), new {id=election.E_Id},election);
+        //}
+
+
+
+        //[HttpPut("updateElections{id}")]
+        //public async Task<IActionResult> UpdateElectionsEDetailAsync([FromRoute]int id,[FromForm]string e_name,[FromForm]string descript)
+        //{
+        //    var status = await _electionOpt.UpdateElectionDetailAsync(id,e_name,descript);
+        //    if (!status)
+        //    {
+        //        return BadRequest("Failed to Update Record");
+        //    }
+        //   return Ok("Updated Record");
+        ////}
+
+
+        //[HttpPut("updateElectionDuration/{id}")]
+        //public async Task<IActionResult> UpdateElectionDurationAsync([FromRoute] int id, [FromForm] DateTime start, [FromForm] DateTime stop)
+        //{
+        //    var status = await _electionOpt.UpdateElectionPeriodAsync(id,start,stop);
+        //    if (!status)
+        //    {
+        //        return BadRequest("Failed to Update Record..");
+        //    }
+        //    return Ok("Updated Record...");
+        //}
+
+        //[HttpDelete("deleteelection/{id}")]
+        //public async Task<IActionResult> DeleteElectionAsync([FromRoute] int id)
+        //{
+        //    var status = await _electionOpt.RemoveElectionAsync(id);
+        //    if (!status)
+        //    {
+        //        return BadRequest("Failed to Delete Record..");
+        //    }
+        //    return Ok("Deleted Record...");
+        //}
+
+
+
+
+Voter Controller:
+
+
+//[HttpPost("addvoter")]
+//public async Task<IActionResult> InsertVoter([FromBody] Voters voter)
+//{
+//    if (voter == null)
+//    {
+//        return BadRequest("Voter data is required.");
+//    }
+
+//    try
+//    {
+
+//        await _voterOpt.AddVoterAsync(voter);
+
+//        return Ok("Voter record added successfully.");
+//    }
+//    catch (Exception ex)
+//    {
+
+//        Console.WriteLine($"An error occurred: {ex.Message}");
+
+//        return StatusCode(500, "An error occurred while adding the voter record");
+
+//    }
+//}
+
+
+//[HttpPost("addvoter")]
+//public async Task<IActionResult> InsertVoter([FromBody] Voters voter)
+//{
+//    if (voter == null)
+//    {
+//        return BadRequest("Voter data is required.");
+//    }
+
+//    try
+//    {
+
+//        await _voterOpt.AddVoterAsync(voter);
+
+//        return Ok("Voter record added successfully.");
+//    }
+//    catch (Exception ex)
+//    {
+
+//        Console.WriteLine($"An error occurred: {ex.Message}");
+
+//        return StatusCode(500, "An error occurred while adding the voter record");
+
+//    }
+//}
+
+
+VoterOpt:
+
+//public async Task<bool> UpdateVoterAsync(int vo_id,string emailid)
+//{
+//    try
+//    {
+//        await _conn.OpenAsync();
+//        int result = await _conn.ExecuteAsync("UpdateVoter", new {vid=vo_id,vemail = emailid },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//        return result <0;
+
+//    }
+//    catch(Exception ex)
+//    {
+//        Console.WriteLine(ex.Message);
+//        return false;
+//    }
+//    finally
+//    {
+//        await _conn.CloseAsync();
+//    }
+//}
+
+
+//public async Task<bool> RemoveVoterAsync(int voterid)
+//{
+
+//    using (_conn)
+//    {
+//        int result = await _conn.ExecuteAsync("DeleteVoter", new { vid = voterid },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//        return result < 0;
+
+//    }
+//}
+
+
+ElectionOpt:
+
+
+
+
+
+
+//    public async Task<bool> AddElectionAsync(Elections election)
+//    {
+//        try
+//        {
+//            await _conn.OpenAsync();
+
+//            int result = await _conn.ExecuteAsync(
+//                "AddElections",
+//                new
+//                {
+//                    e_name = election.Name,
+//                    descr = election.Description,
+//                    commence = election.StartDate,
+//                    terminate = election.EndDate
+//                },
+//                commandType: System.Data.CommandType.StoredProcedure
+//            );
+
+
+//            return result < 0;
+//        }
+//        catch (Exception ex)
+//        {
+
+//            Console.WriteLine($"Error occurred while adding election: {ex.Message}");
+//            return false;
+//        }
+//        finally
+//        {
+
+//            await _conn.CloseAsync();
+//        }
+//    }
+
+//    public async Task<bool> UpdateElectionDetailAsync(int e_id, string e_name,string e_descr)
+//    {
+//        try
+//        {
+//            await _conn.OpenAsync();
+//            int result = await _conn.ExecuteAsync("UpdateElectionsDetail", new { elect_id=e_id ,e_name = e_name, descr = e_descr },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//            return result < 0;
+//        }
+//        catch (Exception ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            return false;
+//        }
+//        finally
+//        {
+//            await _conn.CloseAsync();
+//        }
+
+//    }
+//    public async Task<bool> UpdateElectionPeriodAsync(int e_id, DateTime commence, DateTime stop)
+//    {
+//        try
+//        {
+//            await _conn.OpenAsync();
+//            int result = await _conn.ExecuteAsync("UpdateElectionsDate", new { elect_id = e_id, commence = commence, terminate=stop },
+//            commandType: System.Data.CommandType.StoredProcedure);
+//            return result < 0;
+//        }
+//        catch (Exception ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            return false;
+//        }
+//        finally
+//        {
+//            await _conn.CloseAsync();
+//        }
+//    }
+//    public async Task<bool> RemoveElectionAsync(int e_id)
+//{
+//        try
+//        {
+//            await _conn.OpenAsync();
+//            int result = await _conn.ExecuteAsync("DeleteElections", new { elect_id = e_id},
+//            commandType: System.Data.CommandType.StoredProcedure);
+//            return result < 0;
+//        }
+//        catch (Exception ex)
+//        {
+//            Console.WriteLine(ex.Message);
+//            return false;
+//        }
+//        finally
+//        {
+//            await _conn.CloseAsync();
+//        }
+//    }
+
+
+IElectionOpt:
+   //Task<bool> AddElectionAsync(Elections election);
+   //Task<bool> UpdateElectionDetailAsync(int e_id, string e_name,string e_decsr);
+   //Task<bool> UpdateElectionPeriodAsync(int e_id,DateTime commence, DateTime stop);
+   //Task<bool> RemoveElectionAsync(int e_id);

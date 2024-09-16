@@ -8,19 +8,19 @@
   border-radius: 10px;
   box-shadow: 5px 20px 50px #2a0606;
   text-align: center;
-  margin-top: 100px;
-  margin-left: 580px; /* Margin to prevent it from sticking to the edges */
+  margin-top: 140px;
+  margin-left: 550px; /* Margin to prevent it from sticking to the edges */
 }
 
 h1{
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: -90px;
-  font-weight: 100;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-top:-90px;
+  font-weight: 900;
 }
 .login-container label {
   color: #fdfcff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.2em; /* Adjusted font size for better scaling */
   font-weight: bold;
   display: block;
@@ -31,7 +31,7 @@ h1{
   width: 90%;
   height: 20px;
   background: #ffffff;
-  margin: 10px auto; /* Adjusted margins */
+  margin: 20px auto; /* Adjusted margins */
   padding: 10px;
   border: none;
   outline: none;
@@ -92,4 +92,11 @@ h1{
   .login-container button {
     height: 40px;
   }
+}
+
+.error{
+	margin-top: 10px;
+	color: #ea2323;
+	margin-left: 30px;
+	font-weight: 1000;
 }

@@ -7,18 +7,18 @@
 }
 
 body {
-  height: 100vh;
- margin-left: -150px;
- 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: auto;
+  margin-top: 20px;
+ background-color: #170507;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 table {
   background: #2427d3 ;
   border-radius: 0.25em;
   border-collapse: collapse;
   border: block 2px;;
-  margin-left:250px;
-  margin-top: 50px;
+  margin-left:380px;
+  margin-top: 20px;
  
 }
 
@@ -26,8 +26,8 @@ table {
   background: #1d5321;
   border-radius: 0.50em;
   border-collapse: collapse;
-  margin-left:600px;
-  margin-top: 20px;
+  margin-left:500px;
+  margin-top: 40px;
 }
 
 th {
@@ -58,8 +58,20 @@ tbody tr:hover {
   background: #014055;
 }
 
+.labeldesign{
+  color: #ffffff;
+  font-size: 1.8em;
+  font-weight: 8000;
+  margin-left: 620px;
+  margin-top: 200px;
+}
 
-
+#electionSelect{
+  margin-left: 600px;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 30px;
+}
 /* CSS */
 .button1{
   display: flex;
@@ -136,4 +148,14 @@ tbody tr:hover {
   :hover{
       background-color: #1db954;
   }
+  
+}
+
+canvas {
+  max-width: 80%;
+  height: 50px;
+  color: #000000;
+  background-color: #f6f8f6;
+  margin-left: 200px;
+  margin-top: 50px;
 }

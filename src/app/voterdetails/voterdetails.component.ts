@@ -83,9 +83,11 @@ export class VoterdetailsComponent implements OnInit {
           alert(`Vote cast for candidate ID: ${this.selectedCandidateId}`);// Show the plain text response
           this.selectedElectionId = null;
           this.selectedCandidateId = null;
+          this.VotingStatus();
           this.loadActiveElectionsWithCandidates();
-          this.voter.votingStatus=this.VotingStatus();
+          
           // Refresh the list after voting
+          this.refreshPage();
         },
         (error) => {
           console.error('Error casting vote:', error);
@@ -96,6 +98,11 @@ export class VoterdetailsComponent implements OnInit {
       alert('Please select both an election and a candidate.');
     }
     
+  
+}
+refreshPage() {
+      
+  this.ngOnInit(); 
 }
   }
   

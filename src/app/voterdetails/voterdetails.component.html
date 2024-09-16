@@ -9,14 +9,17 @@
   <div id="gradient1" *ngIf="!voter.votingStatus">
     <h3>Available Elections:</h3>
     <ul>
+      
       <li *ngFor="let item of electionsWithCandidates">
         <h4>{{ item.election.name }}</h4>
         <p>{{ item.election.description }}</p>
-        <button (click)="selectElection(item.election.e_Id)">Select Election</button>
+        <button class="button1" (click)="selectElection(item.election.e_Id)">Select Election</button>
         <ul *ngIf="selectedElectionId === item.election.e_Id">
+          <h2>Candidates:</h2>
           <li *ngFor="let candidate of item.candidates">
-            <p><strong>{{candidate.candidate_id}}-{{ candidate.name }}</strong> ({{ candidate.party }})</p>
-            <button class="button1" (click)="selectCandidate(candidate.candidate_id)">Select</button>
+            <p><strong>Candidate ID: {{candidate.candidate_id}}
+            --> Name: {{ candidate.name }}</strong> ({{ candidate.party }})</p>
+            <button class="button1" (click)="selectCandidate(candidate.candidate_id)">Vote</button>
           </li>
         </ul>
       </li>

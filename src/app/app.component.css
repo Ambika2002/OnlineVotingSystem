@@ -1,9 +1,9 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
-body{height: 100vh;
+body{height: 1000px;
 	background: url('C:/Users/asanap2/Downloads/manny-becerra-BzZ6aI5_AYs-unsplash.jpg');
-	background-repeat: no-repeat;
+	background-repeat:repeat-x;
 	background-size: cover;
-	
+	opacity: 10;
 	background-position: 50px 50px 50px 50px;
 	
 }

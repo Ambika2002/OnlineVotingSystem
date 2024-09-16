@@ -7,22 +7,31 @@
 }
 
 body {
-  background: #ea910b;
+ 
   font-family: 'Open Sans', sans-serif;
 }
 table {
   background: #1d5321;
   border-radius: 0.25em;
   border-collapse: collapse;
-  border: block 1px;;
-  margin: 1em;
+  border: block 1px;
+  margin-top:40px;
+  margin-left: 450px;
+}
+.table2 {
+  background: #1d5321;
+  border-radius: 0.25em;
+  border-collapse: collapse;
+  border: block 1px;
+  margin-top:40px;
+  margin-left: 280px;
 }
 th {
   border-bottom: 1px solid #364043;
   color: #ffffff;
   font-size: 1.5em;
   font-weight: 8000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 0.5em 1em;
   text-align: left;
 }
@@ -31,7 +40,7 @@ td {
   font-weight: 100;
   padding: 1em 1em;
   text-align: centre;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .disabled td {
   color: #4F5F64;
@@ -44,8 +53,11 @@ tbody tr:hover {
 }
 h2{
   justify-items: center;
-  margin-left: 300px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 450px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #f8f8f8;
+  font-weight: 1000;
+  margin-top: 30px;
 }
 
 /* CSS */
@@ -137,3 +149,64 @@ justify-self: center;
                     }
                 
   }
+
+  * CSS */
+.button1next{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  margin-top: -10px;
+  width: 100px;
+  margin-left: 1000px;
+
+  color: #fff;
+  background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button1:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+/* CSS */
+.button2next{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+  width: 100px;
+
+  color: #fff;
+  background: linear-gradient(180deg, #d3390b 0%, #d3162c 100%);
+   background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button2:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+.addP{
+height: 30px;
+width: auto;
+justify-self: center;
+
+}

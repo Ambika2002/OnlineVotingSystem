@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -35,101 +37,20 @@ export class AppComponent {
     endDate: new Date()
   };
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {
-    this.refreshVoters();
-    this.refreshCandidates();
-    this.refreshElections();
+ 
+  constructor(private authService: AuthService, private router: Router) {
+    // Listen for browser back navigation
+    window.onpopstate = () => {
+      this.handleBackButton();
+    };
   }
 
-  // Voters CRUD Operations
-
-  refreshVoters() {
-    this.http.get(this.APIUrl + "GetAllVoters").subscribe(data => {
-      this.voters = data;
-    });
-  }
-
-  addVoter() {
-    this.http.post(this.APIUrl + 'AddVoter', this.voterInfo).subscribe(data => {
-      alert(data);
-      this.refreshVoters();
-    });
-  }
-
-  updateVoter(id: any) {
-    this.voterInfo.name = (<HTMLInputElement>document.getElementById("voterName")).value;
-    this.http.put(this.APIUrl + "UpdateVoter/" + id, this.voterInfo).subscribe(data => {
-      alert(data);
-      this.refreshVoters();
-    });
-  }
-
-  deleteVoter(id: any) {
-    this.http.delete(this.APIUrl + "DeleteVoter?voterId=" + id).subscribe(data => {
-      alert(data);
-      this.refreshVoters();
-    });
-  }
-
-  // Candidates CRUD Operations
-
-  refreshCandidates() {
-    this.http.get(this.APIUrl + "GetAllCandidates").subscribe(data => {
-      this.candidates = data;
-    });
-  }
-
-  addCandidate() {
-    this.http.post(this.APIUrl + 'AddCandidate', this.candidateInfo).subscribe(data => {
-      alert(data);
-      this.refreshCandidates();
-    });
-  }
-
-  updateCandidate(id: any) {
-    this.candidateInfo.candidateName = (<HTMLInputElement>document.getElementById("candidateName")).value;
-    this.http.put(this.APIUrl + "UpdateCandidate/" + id, this.candidateInfo).subscribe(data => {
-      alert(data);
-      this.refreshCandidates();
-    });
-  }
-
-  deleteCandidate(id: any) {
-    this.http.delete(this.APIUrl + "DeleteCandidate?candidateId=" + id).subscribe(data => {
-      alert(data);
-      this.refreshCandidates();
-    });
-  }
-
-  // Elections CRUD Operations
-
-  refreshElections() {
-    this.http.get(this.APIUrl + "GetAllElections").subscribe(data => {
-      this.elections = data;
-    });
-  }
-
-  addElection() {
-    this.http.post(this.APIUrl + 'AddElection', this.electionInfo).subscribe(data => {
-      alert(data);
-      this.refreshElections();
-    });
-  }
-
-  updateElection(id: any) {
-    this.electionInfo.electionName = (<HTMLInputElement>document.getElementById("electionName")).value;
-    this.http.put(this.APIUrl + "UpdateElection/" + id, this.electionInfo).subscribe(data => {
-      alert(data);
-      this.refreshElections();
-    });
-  }
-
-  deleteElection(id: any) {
-    this.http.delete(this.APIUrl + "DeleteElection?electionId=" + id).subscribe(data => {
-      alert(data);
-      this.refreshElections();
-    });
+  // Method to handle back button logic
+  handleBackButton() {
+    if (this.authService.isAuthenticated()) {
+      this.authService.logout(); // Log out if the user is authenticated
+      alert('You have been logged out due to back navigation.');
+      this.router.navigate(['/login']); // Redirect to login page
+    }
   }
 }

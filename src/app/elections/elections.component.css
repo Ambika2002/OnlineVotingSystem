@@ -15,7 +15,8 @@ table {
   border-radius: 0.25em;
   border-collapse: collapse;
   border: block 1px;;
-  margin: 1em;
+  margin-left: 230px;
+  margin-top: 20px;
 }
 th {
   border-bottom: 1px solid #364043;
@@ -121,11 +122,14 @@ tbody tr:hover {
 
 }
 
+
 h2{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: auto;
- margin-left: 100px;
+  margin-top: 20px;
+ margin-left: 230px;
+ color: white;
 }
+
 
 .button4{
   display: inline-block;

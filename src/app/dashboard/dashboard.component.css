@@ -28,7 +28,9 @@
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background:  linear-gradient(0deg, rgba(27,166,55,1) 0%, rgba(212,148,10,1) 53%);
+   margin-top: -200px;
+   margin-left: 280px;
+   color: #fff;
   }
   
   .button-container {
@@ -50,5 +52,31 @@
   
   .login-button:hover {
     background-color: #0056b3;
+  }
+  
+  .button1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: none;
+    margin-top: -300px;
+    margin-left: 30px;
+    width: 100px;
+  
+    color: #fff;
+    background: linear-gradient(180deg, #4B91F7 0%, #367AF6 100%);
+     background-origin: border-box;
+    box-shadow: 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button1:focus {
+    box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+    outline: 0;
   }
   
