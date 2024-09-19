@@ -1,0 +1,302 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E79D91B8-2307-4F1E-8B7D-A9DE5CFEBCC9}|..\\OnlineVotingSystemTest\\OnlineVotingSystemTest.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystemtest\\operationstests\\adminopttest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E79D91B8-2307-4F1E-8B7D-A9DE5CFEBCC9}|..\\OnlineVotingSystemTest\\OnlineVotingSystemTest.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystemtest\\controllertests\\votercontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E79D91B8-2307-4F1E-8B7D-A9DE5CFEBCC9}|..\\OnlineVotingSystemTest\\OnlineVotingSystemTest.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystemtest\\controllertests\\admincontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\voterrepository\\voteropt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:voterrepository\\voteropt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\models\\candidates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:models\\candidates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\electionresultrepsitory\\ielectionresultopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:electionresultrepsitory\\ielectionresultopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\electionrepository\\ielectionopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:electionrepository\\ielectionopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\controllers\\votercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:controllers\\votercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\controllers\\electionresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:controllers\\electionresultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\adminrepository\\iadminopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:adminrepository\\iadminopt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\adminrepository\\adminoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:adminrepository\\adminoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\models\\voterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:models\\voterrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\logs\\mylog-20240917.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:logs\\mylog-20240917.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|c:\\users\\asanap2\\source\\repos\\onlinevotingsystem\\logs\\mylog-20240913.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0C03C210-D2B8-4048-BB7C-078BEA55D44A}|OnlineVotingSystem.csproj|solutionrelative:logs\\mylog-20240913.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IElectionResultOpt.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\ElectionResultRepsitory\\IElectionResultOpt.cs",
+              "RelativeDocumentMoniker": "ElectionResultRepsitory\\IElectionResultOpt.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\ElectionResultRepsitory\\IElectionResultOpt.cs",
+              "RelativeToolTip": "ElectionResultRepsitory\\IElectionResultOpt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:28:24.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Candidates.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Models\\Candidates.cs",
+              "RelativeDocumentMoniker": "Models\\Candidates.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Models\\Candidates.cs",
+              "RelativeToolTip": "Models\\Candidates.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:13:53.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VoterOpt.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\VoterRepository\\VoterOpt.cs",
+              "RelativeDocumentMoniker": "VoterRepository\\VoterOpt.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\VoterRepository\\VoterOpt.cs",
+              "RelativeToolTip": "VoterRepository\\VoterOpt.cs",
+              "ViewState": "AgIAADUBAAAAAAAAAAASwHEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T09:33:19.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwBwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T10:23:03.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-18T10:23:08.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\ControllerTests\\AdminControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\OnlineVotingSystemTest\\ControllerTests\\AdminControllerTest.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\ControllerTests\\AdminControllerTest.cs",
+              "RelativeToolTip": "..\\OnlineVotingSystemTest\\ControllerTests\\AdminControllerTest.cs",
+              "ViewState": "AgIAABkBAAAAAAAAAAAcwB4BAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:03:34.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VoterControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\ControllerTests\\VoterControllerTest.cs",
+              "RelativeDocumentMoniker": "..\\OnlineVotingSystemTest\\ControllerTests\\VoterControllerTest.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\ControllerTests\\VoterControllerTest.cs",
+              "RelativeToolTip": "..\\OnlineVotingSystemTest\\ControllerTests\\VoterControllerTest.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAkwJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:04:03.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminOptTest.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\OperationsTests\\AdminOptTest.cs",
+              "RelativeDocumentMoniker": "..\\OnlineVotingSystemTest\\OperationsTests\\AdminOptTest.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystemTest\\OperationsTests\\AdminOptTest.cs",
+              "RelativeToolTip": "..\\OnlineVotingSystemTest\\OperationsTests\\AdminOptTest.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAswDkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:04:49.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IElectionOpt.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\ElectionRepository\\IElectionOpt.cs",
+              "RelativeDocumentMoniker": "ElectionRepository\\IElectionOpt.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\ElectionRepository\\IElectionOpt.cs",
+              "RelativeToolTip": "ElectionRepository\\IElectionOpt.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:28:18.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ElectionResultController.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\ElectionResultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ElectionResultController.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\ElectionResultController.cs",
+              "RelativeToolTip": "Controllers\\ElectionResultController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:27:11.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AdminOperations.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\AdminRepository\\AdminOperations.cs",
+              "RelativeDocumentMoniker": "AdminRepository\\AdminOperations.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\AdminRepository\\AdminOperations.cs",
+              "RelativeToolTip": "AdminRepository\\AdminOperations.cs",
+              "ViewState": "AgIAAOcBAAAAAAAAAADwv9gBAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T06:24:41.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAN8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T05:52:27.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VoterController.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\VoterController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VoterController.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Controllers\\VoterController.cs",
+              "RelativeToolTip": "Controllers\\VoterController.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAcwEgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T08:55:18.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MyLog-20240917.txt",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\logs\\MyLog-20240917.txt",
+              "RelativeDocumentMoniker": "logs\\MyLog-20240917.txt",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\logs\\MyLog-20240917.txt",
+              "RelativeToolTip": "logs\\MyLog-20240917.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-18T10:22:40.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IAdminOpt.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\AdminRepository\\IAdminOpt.cs",
+              "RelativeDocumentMoniker": "AdminRepository\\IAdminOpt.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\AdminRepository\\IAdminOpt.cs",
+              "RelativeToolTip": "AdminRepository\\IAdminOpt.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T09:33:52.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MyLog-20240913.txt",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\logs\\MyLog-20240913.txt",
+              "RelativeDocumentMoniker": "logs\\MyLog-20240913.txt",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\logs\\MyLog-20240913.txt",
+              "RelativeToolTip": "logs\\MyLog-20240913.txt",
+              "ViewState": "AgIAAAsEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-09-18T10:22:42.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "VoterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Models\\VoterRequest.cs",
+              "RelativeDocumentMoniker": "Models\\VoterRequest.cs",
+              "ToolTip": "C:\\Users\\asanap2\\source\\repos\\OnlineVotingSystem\\Models\\VoterRequest.cs",
+              "RelativeToolTip": "Models\\VoterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T05:36:13.676Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
