@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class RegisterComponent {
     passwordHash: ''
   };
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router,private authService: AuthService) { }
 
   // Method to register a new voter
   registerVoter() {
@@ -39,7 +40,7 @@ export class RegisterComponent {
     this.http.post(this.APIUrl + 'RegisterVoter', voterRequest).subscribe(
       (response) => {
         alert('Registration successful!');
-        console.log(response);
+        //console.log(response);
         this.clearRegisterForm();
       },
       (error) => {
@@ -49,27 +50,37 @@ export class RegisterComponent {
     );
   }
 
-  // Method to log in an existing voter
+
+
   loginVoter() {
     const loginRequest = {
       voterId: this.loginForm.voterId,
       passwordHash: this.loginForm.passwordHash
     };
-
-    this.http.post(this.APIUrl + 'LoginVoter', loginRequest).subscribe(
+  
+    this.authService.voterLogin(loginRequest).subscribe(
       (response: any) => {
         alert(response.message || 'Login successful!');
-        console.log(response);
+  
+        // Store the JWT token for future use
+        this.authService.setToken(response.token);
+  
+        // Log the response and voter object
+       // console.log(response);
+  
+        // Clear the login form
         this.clearLoginForm();
+  
+        // Navigate to voterdetails page and pass voter object including voterId
         this.router.navigate(['/voterdetails'], { state: { voter: response.voter } });
-        // Add any further login handling here, such as navigation
       },
       (error) => {
         console.error('Error during login:', error);
-        alert('Login failed: ' + error.error.message);
+        alert('Login failed: ' + (error.error.message || 'Unknown error occurred'));
       }
     );
   }
+
 
   // Clear registration form fields
   clearRegisterForm() {

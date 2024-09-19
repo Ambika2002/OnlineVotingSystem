@@ -32,10 +32,14 @@ export class AuthService {
     return !!token; // Return true if token exists
   }
 
+  voterLogin(loginRequest: any) {
+    return this.http.post<{ token: string, voter: any }>('https://localhost:7181/api/Voter/LoginVoter', loginRequest);
+  }
+
   // Logout method
   logout() {
     localStorage.removeItem('authToken');
-    this.router.navigate(['/login']);
+    this.router.navigate(['/home']);
   }
 }
 

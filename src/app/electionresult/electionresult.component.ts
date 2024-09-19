@@ -26,14 +26,16 @@ export class ElectionresultComponent implements OnInit {
   loadElections() {
     // Fetch list of elections to populate the dropdown
     this.http.get(`${this.APIUrl}GetElectionResults`).subscribe((data: any) => {
-      this.elections = data;
+      this.elections = data.filter((election: any, index: number, self: any) =>
+        index === self.findIndex((e: any) => e.electionName === election.electionName));
     }, error => {
       console.error("Error fetching elections:", error);
     });
   }
 
   onElectionChange(event: any) {
-    this.selectedElectionId = +event.target.value; // Update selectedElectionId
+    this.selectedElectionId = +event.target.value;
+    this.getWinner(); // Update selectedElectionId
     this.refreshResults(); // Fetch results for the selected election
   }
 

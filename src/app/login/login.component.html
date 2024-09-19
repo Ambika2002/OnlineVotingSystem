@@ -3,7 +3,7 @@
     <form (ngSubmit)="login()" #loginForm="ngForm">
       <div>
         <h1>Admin Login</h1>
-        <label for="username">Username</label>
+        <label for="username" class="required-field">Username</label>
         <input type="text" id="username" [(ngModel)]="loginRequest.username" name="username" placeholder="Enter your Username" required minlength="4"
         maxlength="20"
         pattern="[A-Za-z0-9]+"
@@ -13,7 +13,7 @@
           </div>
       </div>
       <div>
-        <label for="password">Password</label>
+        <label for="password" class="required-field">Password</label>
         <input type="password" id="password" [(ngModel)]="loginRequest.password" name="password" placeholder="Enter your password" required minlength="4"
         maxlength="20"  #passwordHash="ngModel" />
         <div *ngIf="passwordHash.invalid && passwordHash.touched" class="error">

@@ -26,6 +26,6 @@ export class DashboardComponent implements OnInit {
   logout() {
     this.authService.logout(); // Call the logout method from the service
   }
-  // Methods to fetch voters, candidates, elections, and CRUD operations go here
+
 }
 

@@ -1,6 +1,4 @@
 /* homepage.component.css */
-
-  
 .navbar {
     background-color: #144228;
     padding: 15px 0;
@@ -54,6 +52,22 @@
     background-color: #0056b3;
   }
   
+  .login-button1{
+    background-color: #0b5117;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 300px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #0056b3;
+  }
   .button1{
     display: flex;
     flex-direction: column;

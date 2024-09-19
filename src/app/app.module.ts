@@ -20,6 +20,7 @@ import { IndexComponent } from './index/index.component';
 import { ElectionsviewComponent } from './electionsview/electionsview.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth.guard';
+import { ElectionCandidatesComponent } from './electioncandidates/electioncandidates.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AuthGuard } from './auth.guard';
     DashboardComponent,
     ElectionresultComponent,
     IndexComponent,
-    ElectionsviewComponent, 
+    ElectionsviewComponent,
+    ElectionCandidatesComponent, 
   ],
   imports: [
     BrowserModule,

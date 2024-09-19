@@ -8,10 +8,11 @@ body{height: 1000px;
 	
 }
 
-h1{
-	font-family:Georgia, 'Times New Roman', Times, serif;
+h1{font-family: courier;
    justify-content: center;
    margin-top: 30px;
-   margin-left: 400px;
-   color: azure;
+   margin-left: 200px;
+   color: rgb(255, 255, 255);
+   font-size: 40px;
+   font-weight: bolder;
 }

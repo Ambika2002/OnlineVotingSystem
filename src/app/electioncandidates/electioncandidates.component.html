@@ -1,0 +1,44 @@
+<body>
+  <div>
+    <h2>Election Candidates</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Election Title</th>
+          <th>Candidate Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ec of electionCandidates">
+          <td>{{ ec.electionTitle }}</td>
+          <td>{{ ec.candidateName }}</td>
+          <td>
+            <button class="button2"  (click)="deleteCandidateFromElection(ec.electionId, ec.candidateId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <h2>Manage Election Candidates</h2>
+  <table class="table2">
+    <div>
+      <label for="elections">Select Election:</label>
+      <select id="elections" [(ngModel)]="selectedElectionId">
+        <option *ngFor="let election of elections" [value]="election.e_Id">{{ election.name }}</option>
+      </select>
+    </div>
+  
+    <div>
+      <label for="candidates">Select Candidate:</label>
+      <select id="candidates" [(ngModel)]="selectedCandidateId">
+        <option *ngFor="let candidate of candidates" [value]="candidate.candidate_id">{{ candidate.name }}</option>
+      </select>
+    </div>
+  </table>
+    <button class="button1" (click)="addCandidateToElection()">Add Candidate to Election</button>
+
+  </div>
+</body>

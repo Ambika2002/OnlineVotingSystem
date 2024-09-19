@@ -1,4 +1,70 @@
-<!-- <body>
+
+ <body>
+  <div class="col-md-12">
+    <!-- Dropdown to select Election ID -->
+  
+    <div>
+      <label class="labeldesign" for="electionSelect">Select Election ID:</label>
+      <select id="electionSelect" [(ngModel)]="selectedElectionId" (change)="onElectionChange($event)">
+        <option *ngFor="let election of elections" [value]="election.electionId">{{ election.electionName }}</option>
+      </select>
+    </div>
+    <!-- Table to display election results -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Candidate Id</th>
+          <th>Candiate Name</th>
+          <th>Party</th>
+          <th>Total Votes</th>
+          <th>Percentage of Votes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of results">
+          <td>{{ result.candidate_id }}</td>
+          <td>{{ result.name }}</td>
+          <td>{{ result.party }}</td>
+          <td>{{ result.totalVotes }}</td>
+          <td>{{ calculateVotePercentage(result.totalVotes)}}%</td>
+        </tr>
+      </tbody>
+      <!-- <tr>
+        <button class="button4" (click)="getWinner()">Get Winner</button></tr> -->
+    </table>
+
+    <!-- Table to display winner -->
+    <table class="table1" border="1">
+      <thead>
+        <tr id="winner">Winner</tr>
+        <tr>
+          <th>Candiate Name</th>
+          <th>Party</th>
+          <th>Total Votes</th>
+          <th>Percentage of <br>Votes received</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let win of winner">
+          <td>{{ win.name }}</td>
+          <td>({{ win.party }})</td>
+          <td>{{ win.totalVotes }}</td>
+          <td>{{ win.votePercentage | number:'1.2-2' }}%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+     <!-- Canvas for Chart.js -->
+     <div style="width: 80%; margin: auto;">
+      <canvas id="electionChart"></canvas>
+    </div>
+  </body>
+
+
+
+
+  <!-- <body>
   <div class="col-md-12">
     <table border="1">
       <thead>
@@ -48,72 +114,3 @@
   </tbody>
 </table>
  -->
-
-
-
-
-
-
- <body>
-  
-
-
-  <div class="col-md-12">
-    <!-- Dropdown to select Election ID -->
-  
-    <div>
-      <label class="labeldesign" for="electionSelect">Select Election ID:</label>
-      <select id="electionSelect" [(ngModel)]="selectedElectionId" (change)="onElectionChange($event)">
-        <option *ngFor="let election of elections" [value]="election.electionId">{{ election.electionName }}</option>
-      </select>
-    </div>
-    <!-- Table to display election results -->
-    <table border="1">
-      <thead>
-        <tr>
-          <th>Candidate Id</th>
-          <th>Candiate Name</th>
-          <th>Party</th>
-          <th>Total Votes</th>
-          <th>Percentage of Votes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let result of results">
-          <td>{{ result.candidate_id }}</td>
-          <td>{{ result.name }}</td>
-          <td>{{ result.party }}</td>
-          <td>{{ result.totalVotes }}</td>
-          <td>{{ calculateVotePercentage(result.totalVotes)}}%</td>
-        </tr>
-      </tbody>
-      <tr>
-        <button class="button4" (click)="getWinner()">Get Winner</button></tr>
-    </table>
-
-    <!-- Table to display winner -->
-    <table class="table1" border="1">
-      <thead>
-        <tr>
-          <th>Candiate Name</th>
-          <th>Party</th>
-          <th>Total Votes</th>
-          <th>Percentage of <br>Votes received</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let win of winner">
-          <td>{{ win.name }}</td>
-          <td>({{ win.party }})</td>
-          <td>{{ win.totalVotes }}</td>
-          <td>{{ win.votePercentage }}%</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-     <!-- Canvas for Chart.js -->
-     <div style="width: 80%; margin: auto;">
-      <canvas id="electionChart"></canvas>
-    </div>
-  </body>

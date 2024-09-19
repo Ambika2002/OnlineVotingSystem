@@ -9,7 +9,8 @@
 			<div class="signup">
                 <form (ngSubmit)="registerVoter()">
 					<label for="chk" aria-hidden="true">Register</label>
-                    <input type="text" name="txt" [(ngModel)]="registerForm.voterId" placeholder="Voter Id" required 
+					<label class="labels" for="voterId" class="required-field">Enter VoterId:</label>
+                   <input type="text" name="txt" [(ngModel)]="registerForm.voterId" placeholder="Voter Id" required 
 					minlength="8"
 					maxlength="20"
 					pattern="[A-Za-z0-9]+"
@@ -17,11 +18,13 @@
 					<div  *ngIf="voterId.invalid && voterId.touched" class="error">
 						*Voter ID is required and should be 8-20 alphanumeric characters.
 					  </div>
+					  <label class="labels" for="email" class="required-field">Enter EmailId:</label>
                     <input type="email" name="email" [(ngModel)]="registerForm.email" placeholder="Email" required 
 					email
 					#email="ngModel"> <div *ngIf="email.invalid && email.touched" class="error">
 						*Please enter a valid email address.
 					  </div>
+					  <label class="labels" for="passwordHash" class="required-field">Enter Password:</label>
                     <input type="password" name="pswd" [(ngModel)]="registerForm.passwordHash" placeholder="Password" required minlength="8"
 					maxlength="20"  #passwordHash="ngModel" />
 					<div *ngIf="passwordHash.invalid && passwordHash.touched" class="error">

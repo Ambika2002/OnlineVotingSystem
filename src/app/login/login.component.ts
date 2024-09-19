@@ -22,11 +22,11 @@ export class LoginComponent {
       (response) => {
         this.authService.setToken(response.token); // Store token in localStorage or sessionStorage
         alert('Login successful!');
-        console.log(response.token)
+        //console.log(response.token)
         this.router.navigate(['/dashboard']); // Navigate to dashboard after login
       },
       (error) => {
-        console.error('Login error:', error);
+       // console.error('Login error:', error);
         alert('Login failed. Please check your credentials.');
       }
     );

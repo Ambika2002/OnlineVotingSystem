@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ElectionresultComponent } from './electionresult/electionresult.component';
 import { IndexComponent } from './index/index.component';
 import { ElectionsviewComponent } from './electionsview/electionsview.component';
+import { ElectionCandidatesComponent } from './electioncandidates/electioncandidates.component';
 
 const routes: Routes = [
   { path: 'home', component: IndexComponent },
@@ -21,9 +22,10 @@ const routes: Routes = [
   { path: 'candidates', component: CandidatesComponent,canActivate: [AuthGuard] },
   { path: 'elections', component: ElectionsComponent,canActivate: [AuthGuard] },
   {path:'register', component:RegisterComponent},
-  {path:'voterdetails', component:VoterdetailsComponent},
+  {path:'voterdetails', component:VoterdetailsComponent, canActivate: [AuthGuard] },
   {path:'vote', component:VoteComponent},
-  { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuard] }, 
+  { path: 'dashboard', component: DashboardComponent,canActivate: [AuthGuard] },
+  { path: 'electioncandidates', component: ElectionCandidatesComponent,canActivate: [AuthGuard]},
   {path:'login',component:LoginComponent},
   {path:'results',component:ElectionresultComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }

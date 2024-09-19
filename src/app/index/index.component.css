@@ -40,7 +40,7 @@
   }
   
   .login-button {
-    background-color: #0e5826;
+    background-color: #097e2e;
     box-shadow: #4d6f94;
     color: white;
     border: none;
@@ -49,8 +49,8 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     cursor: pointer;
-    border-radius: 5px;
-    width: 270px;
+    border-radius: 20px;
+    width: 250px;
     transition: background-color 0.3s ease;
   }
   

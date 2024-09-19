@@ -1,44 +1,11 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-candidates',
-//   templateUrl: './candidates.component.html',
-//   styleUrl: './candidates.component.css'
-// })
-// export class CandidatesComponent implements OnInit{
-//   private APIUrl = "https://localhost:7181/api/Admin/";
-
-//   candidates: any = [];
-
-
-//   candidateInfo = {
-//    "candidate_id": "",
-//     "name": "",
-//     "party": "",
-//     "totalVotes": ""
-//   };
-//   constructor(private http: HttpClient) { }
-
-//   ngOnInit() {
-//     this.refreshCandidates();
-//   }
-
-//   // Voters CRUD Operations
-
-//   refreshCandidates() {
-//     this.http.get(this.APIUrl + "GetAllCandidates").subscribe(data => {
-//       this.candidates = data;
-//     });
-//   }
-// }
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-candidates',
   templateUrl: './candidates.component.html',
-  styleUrls: ['./candidates.component.css'] // Corrected `styleUrl` to `styleUrls`
+  styleUrls: ['./candidates.component.css'] 
 })
 export class CandidatesComponent implements OnInit {
   private APIUrl = "https://localhost:7181/api/Admin/";
@@ -73,7 +40,7 @@ export class CandidatesComponent implements OnInit {
         .post(this.APIUrl + `AddCandidate/${this.candidateInfo.name}/${this.candidateInfo.party}`, {})
         .subscribe(
           (response: any) => {
-            alert('Candidate updated successfully!');
+            alert('Candidate Added successfully!');
             this.refreshCandidates(); // Refresh the list after update
             this.isEditMode = false; // Exit edit mode
           },
@@ -97,12 +64,12 @@ export class CandidatesComponent implements OnInit {
         .put(this.APIUrl + `UpdateCandidate/${this.selectedCandidate.candidate_id}/${this.selectedCandidate.party}`, {})
         .subscribe(
           (response: any) => {
-            alert('Candidate updated successfully!');
+            alert('Record updated successfully!');
             this.refreshCandidates(); // Refresh the list after update
             this.isEditMode = false; // Exit edit mode
           },
           (error) => {
-            console.error('Error updating candidate:', error);
+            console.error('Error updating candidate record:', error);
             alert('Error updating candidate: ' + (error.error?.message || 'Unknown error'));
           }
         );
@@ -121,9 +88,10 @@ export class CandidatesComponent implements OnInit {
         },
         (error) => {
           console.error('Error deleting candidate:', error);
-          alert('Error deleting candidate: ' + (error.error.message || 'Unknown error'));
+          alert('Error deleting candidate: ' + (error.error.message || 'The candidate is part of an election, record is not allowed to be deleted'));
         }
       );
     }
   }
 }
+

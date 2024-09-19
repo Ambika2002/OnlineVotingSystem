@@ -100,3 +100,9 @@ h1{
 	margin-left: 30px;
 	font-weight: 1000;
 }
+
+.required-field::before {
+  content: "*";
+  color: red;
+
+}

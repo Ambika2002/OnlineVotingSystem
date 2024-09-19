@@ -17,8 +17,7 @@ export class ElectionsviewComponent {
     this.refreshElections();
   }
 
-  // Elections CRUD Operations
-
+ 
   refreshElections() {
     this.http.get(this.APIUrl + "GetAllElect").subscribe(data => {
       this.elections = data;
